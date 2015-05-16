@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="asTextColor">@android:color/black</item>
+        <item name="ic_action_settings">@drawable/ic_action_gear</item>
+        <item name="asFilterRowSelected">@drawable/filter_row_selector</item>
+        <item name="drawer_background">@color/drawer_background</item>
+        <item name="drawer_background_selected">@color/drawer_background_selected</item>
+        <item name="asSeparatorBackground">#888888</item>
+
+    </style>
+    <style name="Theme.AppTheme3" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <item name="colorControlActivated">@color/colorControlActivated</item>
+        <item name="colorSwitchThumbNormal">@color/colorSwitchThumbNormal</item>
+        <item name="actionBarTheme">@style/AppBar</item>
+    </style>
+    <style name="Theme.AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="asTextColor">@android:color/black</item>
+        <item name="ic_action_settings">@drawable/ic_action_gear</item>
+        <item name="asFilterRowSelected">@drawable/filter_row_selector</item>
+        <item name="drawer_background">@color/drawer_background</item>
+        <item name="drawer_background_selected">@color/drawer_background_selected</item>
+        <item name="asSeparatorBackground">#888888</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <item name="colorControlActivated">@color/colorControlActivated</item>
+        <item name="colorSwitchThumbNormal">@color/colorSwitchThumbNormal</item>
+    </style>
+    <style name="TextAppearance" parent="android:TextAppearance">
+    </style>
+    <style name="TextAppearance.FLA_Filter">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppBar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="selectableItemBackground">@null</item>
+    </style>
+
+    <style name="NavigatorDrawableIcon" parent="Material.Drawable.NavigationDrawerIcon">
+        <item name="lmd_strokeSize">3dp</item>
+        <item name="lmd_padding">18dp</item>
+    </style>
+
+    <style name="NavigationDrawerDrawable">
+        <item name="nd_ripple">@style/ToolbarRippleStyle</item>
+        <item name="nd_icon">@style/NavigatorDrawableIcon</item>
+    </style>
+
+    <style name="ToolbarRippleStyle" parent="Material.Drawable.Ripple.Touch">
+        <item name="rd_backgroundColor">#00000000</item>
+        <item name="rd_maxRippleRadius">48dp</item>
+        <item name="rd_rippleColor">#33FFFFFF</item>
+    </style>
+
+
+    <style name="SimpleDialogLight" parent="Material.App.Dialog.Simple.Light">
+        <item name="di_inAnimation">@anim/anim_scale_in</item>
+        <item name="di_outAnimation">@anim/anim_scale_out</item>
+    </style>
+</resources>
