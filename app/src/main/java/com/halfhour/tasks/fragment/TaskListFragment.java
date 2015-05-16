@@ -45,6 +45,7 @@ public class TaskListFragment extends BaseFragment implements View.OnClickListen
         floatButton.attachToListView(listView);
         floatButton.setOnClickListener(this);
         EventBus.getDefault().register(this);
+        initRefreshLayout();
     }
     @Override
     public void onDestroy() {
