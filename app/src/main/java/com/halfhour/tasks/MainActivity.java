@@ -1,11 +1,13 @@
 package com.halfhour.tasks;
 
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.widget.FrameLayout;
 
+import com.halfhour.tasks.fragment.TaskListFragment;
 import com.rey.material.app.ToolbarManager;
 
 import org.androidannotations.annotations.AfterViews;
@@ -13,7 +15,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 @EActivity(value = R.layout.activity_main)
-public class MainActivity extends ActionBarActivity  implements ToolbarManager.OnToolbarGroupChangedListener{
+public class MainActivity extends ActionBarActivity implements ToolbarManager.OnToolbarGroupChangedListener {
     @ViewById
     Toolbar main_toolbar;
 
@@ -50,6 +52,11 @@ public class MainActivity extends ActionBarActivity  implements ToolbarManager.O
 
         });
         mToolbarManager.registerOnToolbarGroupChangedListener(this);
+
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag("tasks");
+        if (fragment == null) {
+            getSupportFragmentManager().beginTransaction().add(R.id.container,new TaskListFragment(), "tasks").commit();
+        }
     }
 
     @Override

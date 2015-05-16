@@ -2,19 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.halfhour.tasks" >
 
-    <application
+    <application android:name=".MainAppliaction"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity android:theme="@style/Theme.AppTheme2"
+        <activity
             android:name=".MainActivity_"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppTheme2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.AppTheme3"
+            android:name=".TaskAddActivity"
+            android:label="@string/title_activity_task_add" >
         </activity>
     </application>
 
