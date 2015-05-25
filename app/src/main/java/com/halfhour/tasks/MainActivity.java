@@ -8,6 +8,10 @@ import android.view.Gravity;
 import android.widget.FrameLayout;
 
 import com.halfhour.tasks.fragment.TaskListFragment;
+import com.halfhour.tasks.model.Task;
+import com.rey.material.app.Dialog;
+import com.rey.material.app.DialogFragment;
+import com.rey.material.app.SimpleDialog;
 import com.rey.material.app.ToolbarManager;
 
 import org.androidannotations.annotations.AfterViews;
@@ -63,4 +67,27 @@ public class MainActivity extends ActionBarActivity implements ToolbarManager.On
     public void onToolbarGroupChanged(int i, int i1) {
         mToolbarManager.notifyNavigationStateChanged();
     }
+
+    @Override
+    public void onBackPressed() {
+        Dialog.Builder builder= new SimpleDialog.Builder(R.style.SimpleDialogLight){
+            @Override
+            public void onPositiveActionClicked(DialogFragment fragment) {
+                super.onPositiveActionClicked(fragment);
+                finish();
+            }
+
+            @Override
+            public void onNegativeActionClicked(DialogFragment fragment) {
+                super.onNegativeActionClicked(fragment);
+            }
+        };
+
+        builder.title("你确定要退出程序吗？")
+                .positiveAction("确定")
+                .negativeAction("取消");
+        DialogFragment fragment = DialogFragment.newInstance(builder);
+        fragment.show(getSupportFragmentManager(), null);
+    }
+
 }
